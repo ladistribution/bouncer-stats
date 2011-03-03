@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <id>bouncer-stats</id>
+  <name>Bouncer Statistics</name>
+  <description>Real time site traffic analysis</description>
+  <version>0.1-43</version>
+  <type>application</type>
+  <need>lib-zend-framework</need>
+  <need>lib-ld</need>
+  <need>lib-limonade</need>
+  <need>lib-bouncer</need>
+  <need>css-h6e-minimal</need>
+  <need>css-ld-ui</need>
+  <install>
+      <preference type="text" label="Title" name="title" defaultValue="Statistics"/>
+      <preference type="text" label="Path" name="path" defaultValue="stats"/>
+  </install>
+  <configuration>
+      <preference type="text" label="Application Name" name="name"/>
+      <preference type="boolean" label="Advanced query field" name="query_field" defaultValue="0"/>
+  </configuration>
+  <colors>
+      <scheme>base</scheme>
+      <scheme>bars</scheme>
+      <scheme>panels</scheme>
+  </colors>
+  <link rel="icon" type="image/png" href="/icon.png"/>
+  <link rel="ld-icon" type="image/png" href="/ld-icon.png"/>
+</package>
