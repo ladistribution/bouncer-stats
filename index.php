@@ -35,10 +35,11 @@ function not_admin()
 
 function before()
 {
-    global $site, $application, $configuration;
+    global $site, $application, $configuration, $namespace;
     set('site', $site);
     set('application', $application);
     set('configuration', $configuration);
+    set('namespace', $namespace);
     set('hasMenu', true);
     set('hasSearch', false);
     layout('layout.html.php');
@@ -84,7 +85,7 @@ dispatch('/browsers', 'browsers');
 function browsers()
 {
     if (!is_admin()) { return not_admin(); }
-    $_GET['filter'] = '-type:robot -type:unknown -status:bad -status:suspicious';
+    $_GET['filter'] = '-type:robot -type:unknown -status:bad -status:suspicious -rss:1';
     set('isBrowsers', true);
     return html("index.html.php");
 }
@@ -94,7 +95,7 @@ dispatch('/robots', 'robots');
 function robots()
 {
     if (!is_admin()) { return not_admin(); }
-    $_GET['filter'] = '-type:browser -type:unknown -status:bad -status:suspicious';
+    $_GET['filter'] = '-type:browser -type:unknown -status:bad -status:suspicious -rss:1';
     set('isRobots', true);
     return html("index.html.php");
 }

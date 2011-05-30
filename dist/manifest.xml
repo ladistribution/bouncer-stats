@@ -3,7 +3,7 @@
   <id>bouncer-stats</id>
   <name>Bouncer Statistics</name>
   <description>Real time site traffic analysis</description>
-  <version>0.1-43</version>
+  <version>0.1-47</version>
   <type>application</type>
   <need>lib-zend-framework</need>
   <need>lib-ld</need>
@@ -11,6 +11,7 @@
   <need>lib-bouncer</need>
   <need>css-h6e-minimal</need>
   <need>css-ld-ui</need>
+  <need>plugin-bouncer</need>
   <install>
       <preference type="text" label="Title" name="title" defaultValue="Statistics"/>
       <preference type="text" label="Path" name="path" defaultValue="stats"/>
@@ -24,6 +25,7 @@
       <scheme>bars</scheme>
       <scheme>panels</scheme>
   </colors>
+  <!-- icon by PixelMixer http://pixel-mixer.com/basic_set/ -->
   <link rel="icon" type="image/png" href="/icon.png"/>
   <link rel="ld-icon" type="image/png" href="/ld-icon.png"/>
 </package>

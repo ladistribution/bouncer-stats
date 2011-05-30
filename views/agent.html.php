@@ -3,7 +3,7 @@
 
 <?php
 $options = array();
-$options['namespace'] = $site->getConfig('bouncer_id');
+$options['namespace'] = $namespace;
 // $options['detailed_connections'] = true;
 Bouncer_Stats::setOptions($options);
 Bouncer_Stats::agent();

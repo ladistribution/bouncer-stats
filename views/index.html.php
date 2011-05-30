@@ -14,7 +14,7 @@ if (isset($isRobots)) {
 } else {
     $options['keys'] = array('time', 'id', 'host', 'system', 'agent', 'referer', 'hits');
 }
-$options['namespace'] = $site->getConfig('bouncer_id');
+$options['namespace'] = $namespace;
 $options['ignore_ips'] = array('127.0.0.1', '::1', $_SERVER['SERVER_ADDR']);
 // $options['base_static_url'] = $site->getUrl('shared') . '/bouncer';
 Bouncer_Stats::setOptions($options);
@@ -24,6 +24,7 @@ Bouncer_Stats::index();
 </div>
 
 <p class="see-also">
-    See <a href="<?php echo bouncer_url_for('unknown') ?>">unknown</a>
+    See <a href="<?php echo bouncer_url_for('rss') ?>">rss</a>,
+    <a href="<?php echo bouncer_url_for('unknown') ?>">unknown</a>
     and <a href="<?php echo bouncer_url_for('suspicious') ?>">suspicious</a> agents.
 </p>

@@ -29,6 +29,11 @@
   .bouncer-table-connections { position:relative; top:-1px; }
   </style>
   <script type="text/javascript" src="<?php echo Ld_Ui::getJsUrl('/jquery/jquery.js', 'js-jquery') ?>"></script>
+<?php if (defined('LD_COMPRESS_JS') && constant('LD_COMPRESS_JS')) : ?>
+  <script type="text/javascript" src="<?php echo Ld_Ui::getJsUrl('/ld/ld.c.js', 'lib-admin') ?>"></script>
+<?php else : ?>
+  <script type="text/javascript" src="<?php echo Ld_Ui::getJsUrl('/ld/ld.js', 'lib-admin') ?>"></script>
+<?php endif ?>
 </head>
 <body class="ld-layout h6e-layout">
 

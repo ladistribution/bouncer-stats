@@ -8,3 +8,7 @@ $application = $site->getInstance( dirname(__FILE__) . '/..' );
 Zend_Registry::set('application', $application);
 
 $configuration = $application->getConfiguration();
+
+$namespaces = explode(";", $site->getConfig('bouncer_id'));
+
+$namespace = $namespaces[0];
