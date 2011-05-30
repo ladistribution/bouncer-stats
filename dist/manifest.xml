@@ -3,7 +3,7 @@
   <id>bouncer-stats</id>
   <name>Bouncer Statistics</name>
   <description>Real time site traffic analysis</description>
-  <version>0.1-47</version>
+  <version>0.1-49</version>
   <type>application</type>
   <need>lib-zend-framework</need>
   <need>lib-ld</need>

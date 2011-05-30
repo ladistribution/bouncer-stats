@@ -100,6 +100,15 @@ function robots()
     return html("index.html.php");
 }
 
+dispatch('/rss', 'rss');
+
+function rss()
+{
+    if (!is_admin()) { return not_admin(); }
+    $_GET['filter'] = 'rss:1';
+    return html("index.html.php");
+}
+
 dispatch('/unknown', 'unknown');
 
 function unknown()
